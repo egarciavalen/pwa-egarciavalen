@@ -2,12 +2,13 @@
   <h1>Characters</h1>
   <ul class="list-group">
     @for (character of characters(); track character.id) {
-    <a
-      [routerLink]="['/dragonball', character.id]"
-      class="list-group-item list-group-item-action list-group-item-secondary animate__animated animate__rubberBand animate__backInDown"
-    >
-      {{ character.name }} - {{ character.race}}
-    </a>
-  }
+      <a
+        [routerLink]="['/dragonball', character.id]"
+        class="list-group-item list-group-item-action list-group-item-secondary animate__animated animate__rubberBand animate__backInDown"
+      >
+        {{ character.name }} - {{ character.race }}
+      </a>
+    }
   </ul>
 </div>
+<app-spinner [isLoading]="isLoading()"></app-spinner>
