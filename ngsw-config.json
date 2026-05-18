@@ -13,6 +13,9 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
+        ],
+        "urls": [
+          "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         ]
       }
     },
@@ -24,6 +27,17 @@
         "files": [
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "dragonball-api",
+      "urls": ["https://dragonball-api.com/api/characters/**"],
+      "cacheConfig": {
+        "maxSize": 50,
+        "maxAge": "2h",
+        "strategy": "performance"
       }
     }
   ]
