@@ -1,11 +1,11 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CharacterDetail } from '../../models/character-detail.interface';
 import { CharacterService } from '../../services/character-service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dragon-ball-detail',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './dragon-ball-detail.html',
   styleUrl: './dragon-ball-detail.scss',
 })
