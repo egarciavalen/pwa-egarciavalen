@@ -1,6 +1,4 @@
-import { Character } from "./character.interface";
-
-export interface CharacterStats {
+export interface CharacterDetail {
   id: number;
   name: string;
   ki: string;

@@ -1,7 +1,7 @@
-import { CharacterStats } from "./character-stats.interface";
+import { CharacterDetail } from './character-detail.interface';
 
 export interface Character {
-  items: CharacterStats[];
+  items: CharacterDetail[];
   meta: {
     totalItems: number;
     itemCount: number;
@@ -14,5 +14,5 @@ export interface Character {
     previous: string;
     next: string;
     last: string;
-  }
+  };
 }

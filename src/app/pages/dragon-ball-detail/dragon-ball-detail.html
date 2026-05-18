@@ -1,1 +1,25 @@
-<p>dragon-ball-detail works!</p>
+<div clas="container">
+  @if(characterDetail()) {
+    <div class="row animate__animated animate__rubberBand animate__backInDown">
+      <div class="col">
+        <p><strong>Character ID:</strong> {{characterDetail().id }}</p>
+        <p><strong>Name :</strong> {{characterDetail().name }}</p>
+        <p><strong>Ki :</strong> {{characterDetail().ki }}</p>
+        <p><strong>MaxKi :</strong> {{characterDetail().maxKi }}</p>
+        <p><strong>Race :</strong> {{characterDetail().race }}</p>
+        <p><strong>Gender :</strong> {{characterDetail().gender }}</p>
+        <p><strong>Description :</strong> {{characterDetail().description }}</p>
+        <p><strong>Affiliation :</strong> {{characterDetail().affiliation }}</p>
+        <p>          
+          <img
+            style="width: 40%; height: 40%"
+            class="rounded mx-auto d-block"
+            src="{{ characterDetail().image }}"
+            alt="Character from the popular franchise Dragon Ball"/>
+      </div>
+      <div class="col">
+        <a class="btn btn-dark" href="/">Back</a>
+      </div>
+    </div>
+  }
+</div>
