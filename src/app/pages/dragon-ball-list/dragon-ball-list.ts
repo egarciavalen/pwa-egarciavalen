@@ -4,16 +4,20 @@ import { CharacterDetail } from '../../models/character-detail.interface';
 import { Character } from '../../models/character.interface';
 import { CharacterService } from '../../services/character-service';
 import { Spinner } from '../../shared/components/spinner/spinner';
+import {MatTableModule} from '@angular/material/table';
 
 @Component({
   selector: 'app-dragon-ball-list',
-  imports: [RouterModule, Spinner],
+  imports: [RouterModule, Spinner, MatTableModule],
   templateUrl: './dragon-ball-list.html',
   styleUrl: './dragon-ball-list.scss',
 })
 export class DragonBallList implements OnInit {
   characters = signal<CharacterDetail[]>([]);
   isLoading = signal(true);
+  columnsToDisplay = ['id', 'name'];
+
+
   constructor(private characterService: CharacterService) {}
 
   ngOnInit(): void {
