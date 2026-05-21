@@ -5,10 +5,11 @@ import { Character } from '../../models/character.interface';
 import { CharacterService } from '../../services/character-service';
 import { Spinner } from '../../shared/components/spinner/spinner';
 import {MatTableModule} from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-dragon-ball-list',
-  imports: [RouterModule, Spinner, MatTableModule],
+  imports: [RouterModule, Spinner, MatTableModule, MatCardModule],
   templateUrl: './dragon-ball-list.html',
   styleUrl: './dragon-ball-list.scss',
 })

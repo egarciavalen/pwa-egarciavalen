@@ -3,3 +3,15 @@
   border-right: 0.1rem solid black;
   text-align: center;
 }
+
+.card {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
