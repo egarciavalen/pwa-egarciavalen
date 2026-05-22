@@ -1,0 +1,47 @@
+/* CSS para las cards */
+
+/* 010 */
+.card {
+  /* Ancho y márgenes de las cards */
+  width: 30%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+mat-card {
+  /* Bordes redondeados */
+  /* Se ajusta aquí para que no salgan espacios en blanco */
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+/* 001 */
+mat-card-header {
+  /* Centrar el contenido */
+  justify-content: center;
+  padding-bottom: 1rem;
+  
+  /* Bordes redondeados */
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* 001 */
+mat-card-header, mat-card-subtitle {
+  /* Contraste de color de fondo */
+  background-color: black;
+  color: white;
+}
+
+/* 020 */
+.card:hover {
+  /* Sombreado de las cards */
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.5);
+}
+
+/* 001 */
+img {
+  /* Centrar la imagen y reducir su ancho */
+  display: block;
+  margin: auto;
+  width: 30%;
+}

@@ -1,0 +1,61 @@
+
+/* CSS para las tablas */
+
+/* 001 */
+table, td, th {
+  /* Eliminar bordes y dejar espacio */
+  border: none;
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+
+/* 001 */
+table {
+  /* Color de fondo */
+  background-color: #FABA8F;
+}
+
+/* 001 */
+td, th {
+  /* Borde redondeado */
+  border-radius: 1rem;
+  /* Ajustes de letra */
+  font-size: 1.5rem;
+}
+
+/* 010 */
+.mat-column-id, .mat-column-name {
+  /* Alinear texto */
+  text-align: center;
+}
+
+/* 010 */
+.mat-mdc-header-row, .mat-column-id {
+  /* Contraste de color en la tabla */
+  background-color: black;
+  color: white;
+}
+
+/* 010 */
+.mat-column-id {
+  /* Ancho del identificador */
+  width: 4rem;
+}
+
+/* 010 */
+.mat-column-name {
+  /* Colores */
+  background-color: white;
+}
+
+/* 020 */
+.mat-column-name:hover {
+  /* Para marcar el elemento al pasar el ratón/dedo por encima */
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.5);
+}
+
+/* 020*/
+.nameHeaderColumn:hover {
+  /* Para que la fila 'Name' no se subraye al seleccionarse*/
+  box-shadow: none;
+}

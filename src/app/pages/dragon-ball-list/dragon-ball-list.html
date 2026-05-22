@@ -2,10 +2,20 @@
   <div class="headerContainer">
     <h2>DRAGON BALL PWA</h2>
     <div>
-      <button [ngClass]="{'isSelected': isCardView()}" matIconButton  aria-label="Vista del contenido usando tarjetas" (click)="showCardView()">
+      <button
+        [ngClass]="{ isSelected: isCardView() }"
+        matIconButton
+        aria-label="Vista del contenido usando tarjetas"
+        (click)="showCardView()"
+      >
         <mat-icon>apps</mat-icon>
       </button>
-      <button [ngClass]="{'isSelected': !isCardView()}" matIconButton  aria-label="Vista del contenido usando una tabla" (click)="showTableView()">
+      <button
+        [ngClass]="{ isSelected: !isCardView() }"
+        matIconButton
+        aria-label="Vista del contenido usando una tabla"
+        (click)="showTableView()"
+      >
         <mat-icon>list</mat-icon>
       </button>
     </div>
@@ -15,41 +25,11 @@
     <!-- Formato con las cards -->
     <div class="cardContainer">
       @for (character of characters(); track character.id) {
-        <mat-card class="card animate__animated animate__bounceIn" [routerLink]="['/dragonball', character.id]">
-          <mat-card-header>
-            <mat-card-title><strong>ID: </strong>{{ character.id }}</mat-card-title>
-            <mat-card-subtitle><strong>Name:</strong> {{ character.name }}</mat-card-subtitle>
-          </mat-card-header>
-          <img
-            mat-card-image
-            [src]="character.image"
-            alt="Imagen de un personaje de Dragon Ball"
-          />
-        </mat-card>
+        <app-card [character]="character"></app-card>
       }
     </div>
   } @else {
-    <!-- Formato de tabla -->
-    <table mat-table [dataSource]="characters()">
-      <!-- En las cabeceras (th) NO se muestra nada para respetar la captura del enunciado -->
-      <!-- ID -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>ID</th>
-        <td class="animate__animated animate__fadeInLeft" mat-cell *matCellDef="let character">{{ character.id }}</td>
-      </ng-container>
-
-      <!-- NAME -->
-      <ng-container matColumnDef="name">
-        <th class="nameHeaderColumn" mat-header-cell *matHeaderCellDef>Name</th>
-        <td [routerLink]="['/dragonball', character.id]" class="animate__animated animate__fadeInRight" mat-cell *matCellDef="let character">
-         {{ character.name }}
-        </td>
-      </ng-container>
-
-      <!-- Columnas a mostrar -->
-      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-      <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
-    </table>
+    <app-grid [characters]="characters()"></app-grid>
   }
 </div>
 

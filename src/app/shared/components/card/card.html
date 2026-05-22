@@ -1,0 +1,10 @@
+<mat-card
+  class="card animate__animated animate__bounceIn"
+  [routerLink]="['/dragonball', character.id]"
+>
+  <mat-card-header>
+    <mat-card-title><strong>ID: </strong>{{ character.id }}</mat-card-title>
+    <mat-card-subtitle><strong>Name:</strong> {{ character.name }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="character.image" alt="Imagen de un personaje de Dragon Ball" />
+</mat-card>

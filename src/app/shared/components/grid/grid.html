@@ -1,0 +1,28 @@
+<!-- Formato de tabla -->
+<table mat-table [dataSource]="characters">
+  <!-- En las cabeceras (th) NO se muestra nada para respetar la captura del enunciado -->
+  <!-- ID -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td class="animate__animated animate__fadeInLeft" mat-cell *matCellDef="let character">
+      {{ character.id }}
+    </td>
+  </ng-container>
+
+  <!-- NAME -->
+  <ng-container matColumnDef="name">
+    <th class="nameHeaderColumn" mat-header-cell *matHeaderCellDef>Name</th>
+    <td
+      [routerLink]="['/dragonball', character.id]"
+      class="animate__animated animate__fadeInRight"
+      mat-cell
+      *matCellDef="let character"
+    >
+      {{ character.name }}
+    </td>
+  </ng-container>
+
+  <!-- Columnas a mostrar -->
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+</table>
