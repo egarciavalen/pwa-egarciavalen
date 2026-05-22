@@ -1,8 +1,57 @@
-.mat-column-id{
-  width: 1rem;
-  border-right: 0.1rem solid black;
+/* CSS para las tablas */
+
+/* 001 */
+table, td, th {
+  /* Color de fondo */
+  background-color: lightgrey;
+  /* Eliminar bordes y dejar espacio */
+  border: none;
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+
+/* 001 */
+td {
+  /* Borde redondeado */
+  border-radius: 1rem;
+}
+
+/* 010 */
+.mat-column-id, .mat-column-name {
+  /* Alinear texto */
   text-align: center;
 }
+
+/* 010 */
+.mat-column-id {
+  /* Ancho del identificador */
+  width: 4rem;
+  /* Colores */
+  background-color: black;
+  color: white;
+}
+
+/* 010 */
+.mat-column-name {
+  /* Colores */
+  background-color: white;
+  color: black;
+}
+
+/* 001 */
+a {
+  /* Eliminar decoracion y color */
+  text-decoration: none; 
+  color: black;
+}
+
+/* 011 */
+a:hover {
+  /* Incluir subrayado */
+  text-decoration: underline ;
+}
+
+/* CSS para las cards */
 
 .card {
   width: 50%;
