@@ -4,12 +4,16 @@ import { CharacterDetail } from '../../models/character-detail.interface';
 import { Character } from '../../models/character.interface';
 import { CharacterService } from '../../services/character-service';
 import { Spinner } from '../../shared/components/spinner/spinner';
-import {MatTableModule} from '@angular/material/table';
+/* ANGULAR MATERIAL */
+import { MatTableModule} from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @Component({
   selector: 'app-dragon-ball-list',
-  imports: [RouterModule, Spinner, MatTableModule, MatCardModule],
+  imports: [RouterModule, Spinner, MatTableModule, MatCardModule, MatIconModule, MatButtonModule],
   templateUrl: './dragon-ball-list.html',
   styleUrl: './dragon-ball-list.scss',
 })
@@ -19,7 +23,7 @@ export class DragonBallList implements OnInit {
   columnsToDisplay = ['id', 'name'];
 
   // Signal para actualizar la vista
-  showCardView = signal(false);
+  isCardView = signal(true);
 
   constructor(private characterService: CharacterService) {}
 
@@ -31,4 +35,13 @@ export class DragonBallList implements OnInit {
       }, 1000);
     });
   }
+
+  showCardView(): void {
+    this.isCardView.set(true);
+  }
+
+  showTableView(): void {
+    this.isCardView.set(false);
+  }
+
 }

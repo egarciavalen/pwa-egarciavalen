@@ -1,40 +1,58 @@
 <div class="container">
-  <!-- Formato de tabla -->
-  <table mat-table [dataSource]="characters()">
-    
-    <!-- En las cabeceras (th) NO se muestra nada para respetar la captura del enunciado -->
-    <!-- ID -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>ID</th>
-      <td class='backgroundId' mat-cell *matCellDef="let character">{{ character.id }}</td>
-    </ng-container>
+  <div class="buttonContainer">
+    <button mat-icon-button aria-label="Vista del contenido usando tarjetas" (click)="showCardView()">
+      <mat-icon>apps</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Vista del contenido usando una tabla" (click)="showTableView()">
+      <mat-icon>list</mat-icon>
+    </button>
+  </div>
 
-    <!-- NAME -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let character">
-        <a [routerLink]="['/dragonball', character.id]"> {{ character.name }}</a>
-      </td>
-    </ng-container>
+  @if (isCardView()) {
+    <!-- Formato con las cards -->
+    <div class="cardContainer">
+      @for (character of characters(); track character.id) {
+        <mat-card class="card" [routerLink]="['/dragonball', character.id]">
+          <mat-card-header>
+            <mat-card-title><strong>ID: </strong>{{ character.id }}</mat-card-title>
+            <mat-card-subtitle><strong>Name:</strong> {{ character.name }}</mat-card-subtitle>
+          </mat-card-header>
+          <img
+            mat-card-image
+            [src]="character.image"
+            alt="Imagen de un personaje de Dragon Ball"
+          />
+        </mat-card>
+      }
+    </div>
+  } @else {
+    <!-- Formato de tabla -->
+    <table mat-table [dataSource]="characters()">
+      <!-- En las cabeceras (th) NO se muestra nada para respetar la captura del enunciado -->
+      <!-- ID -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let character">{{ character.id }}</td>
+      </ng-container>
 
-    <!-- Columnas a mostrar -->
-    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-    <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
-  </table>
+      <!-- NAME -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let character">
+          <a [routerLink]="['/dragonball', character.id]"> {{ character.name }}</a>
+        </td>
+      </ng-container>
 
+      <!-- Columnas a mostrar -->
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+    </table>
+  }
 </div>
 
 <!--
 
 card
-  @for (character of characters(); track character.id) {
-    <mat-card class="card">
-      <mat-card-header>
-        <mat-card-title><strong>ID: </strong>{{ character.id }}</mat-card-title>
-        <mat-card-subtitle><strong>Name:</strong> {{ character.name }}</mat-card-subtitle>
-      </mat-card-header>
-    </mat-card>
-  }
 
   original
 <ul class="list-group">

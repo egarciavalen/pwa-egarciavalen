@@ -1,3 +1,15 @@
+/* CSS para los botones */
+
+.buttonContainer {
+  display: flex;
+  justify-content: right;  
+  background-color: lightgray;
+}
+
+.buttonContainer button {
+  margin-right: 0.5rem;
+}
+
 /* CSS para las tablas */
 
 /* 001 */
@@ -8,14 +20,14 @@ table, td, th {
   border-spacing: 1rem;
 }
 
-table, td, th {
+/* 001 */
+table {
   /* Color de fondo */
   background-color: lightgrey;
-  color: black;
 }
 
 /* 001 */
-td {
+td, th {
   /* Borde redondeado */
   border-radius: 1rem;
 }
@@ -27,20 +39,22 @@ td {
 }
 
 /* 010 */
-/* Uso de una clase para no mezclar con el ID header */
-.backgroundId {
-  /* Ancho del identificador */
-  width: 4rem;
-  /* Colores */
+.mat-mdc-header-row, .mat-column-id {
+  /* Contraste de color en la tabla */
   background-color: black;
   color: white;
+}
+
+/* 010 */
+.mat-column-id {
+  /* Ancho del identificador */
+  width: 4rem;
 }
 
 /* 010 */
 .mat-column-name {
   /* Colores */
   background-color: white;
-  color: black;
 }
 
 /* 001 */
@@ -58,14 +72,52 @@ a:hover {
 
 /* CSS para las cards */
 
-.card {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  border-radius: 1rem;
+/* 010 */
+.cardContainer {
+  /* Colocacion de los elementos flex */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; 
+
+  /* Color de fondo */
+  background-color: lightgrey;
 }
 
+/* 010 */
+.card {
+  /* Ancho y márgenes de las cards */
+  width: 30%;
+  margin-bottom: 1rem;
+}
+
+/* 001 */
+mat-card-header {
+  /* Centrar el contenido */
+  justify-content: center;
+  padding-bottom: 1rem;
+  
+  /* Bordes redondeados */
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* 001 */
+mat-card-header, mat-card-subtitle {
+  /* Contraste de color de fondo */
+  background-color: black;
+  color: white;
+}
+
+/* 020 */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  /* Sombreado de las cards */
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.5);
+}
+
+/* 001 */
+img {
+  /* Centrar la imagen y reducir su ancho */
+  display: block;
+  margin: auto;
+  width: 30%;
 }
