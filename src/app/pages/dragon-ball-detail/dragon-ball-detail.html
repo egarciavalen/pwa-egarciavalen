@@ -24,12 +24,34 @@
         <mat-tab-group class="detail-tabs">
           <mat-tab label="General info">
             <p class="separator"><strong>Character ID:</strong> {{ characterDetail().id }}</p>
-            <p><strong>Name :</strong> {{ characterDetail().name }}</p>
-            <p><strong>Ki :</strong> {{ characterDetail().ki }}</p>
-            <p><strong>MaxKi :</strong> {{ characterDetail().maxKi }}</p>
+            <p><strong>Name :</strong>{{ characterDetail().name }}</p>
+            <p><strong>Ki :</strong>{{ characterDetail().ki }}</p>
             <p><strong>Race :</strong> {{ characterDetail().race }}</p>
             <p><strong>Gender :</strong> {{ characterDetail().gender }}</p>
             <p><strong>Affiliation :</strong> {{ characterDetail().affiliation }}</p>
+          
+            <!-- Mat expansion panel -->
+            <!-- Base Ki-->
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title> Base Ki </mat-panel-title>
+                  <mat-panel-description> Check the base Ki of the warrior </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>{{ characterDetail().ki }}</p>
+              </mat-expansion-panel>
+              <!-- Max Ki-->
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title> Max Ki </mat-panel-title>
+                  <mat-panel-description>
+                    Check the maximum Ki of the warrior
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>{{ characterDetail().maxKi }}</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+
           </mat-tab>
           <mat-tab label="Description">
             <p class="separator">{{ characterDetail().description }}</p>

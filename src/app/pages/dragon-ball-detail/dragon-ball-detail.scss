@@ -68,6 +68,18 @@ button:hover {
   margin-top: 2rem;
 }
 
+/* CSS para gestionar el expansion panel */
+
+.mat-expansion-panel {
+  /* Igualar el color de fondo */
+  background-color: #FABA8F;
+  /* Margen externo inferior*/
+  margin-bottom: 1rem;
+  /*Borde para diferenciarlo del fondo */
+  border: 0.1rem solid black;
+}
+
+
 /* Otros elementos CSS a gestionar */
 
 /* 001 */
@@ -75,6 +87,7 @@ p {
   /* Facilitar la lectura del texto */
   font-size: 1rem;
   line-height: 1.5rem; 
+  margin-left: 1rem;
 }
 
 /* 001 */

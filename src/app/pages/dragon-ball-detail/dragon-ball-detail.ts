@@ -6,9 +6,10 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 // Angular Material
 import { MatButtonModule } from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
 @Component({
   selector: 'app-dragon-ball-detail',
-  imports: [RouterLink, MatButtonModule, MatTabsModule],
+  imports: [RouterLink, MatButtonModule, MatTabsModule, MatExpansionModule],
   templateUrl: './dragon-ball-detail.html',
   styleUrl: './dragon-ball-detail.scss',
 })
