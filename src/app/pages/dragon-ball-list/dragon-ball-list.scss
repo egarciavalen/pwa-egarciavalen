@@ -1,13 +1,33 @@
 /* CSS para los botones */
 
+/* 001 */
 .buttonContainer {
+  /* Colocación de los botones */
   display: flex;
   justify-content: right;  
+  /* Color de fondo */
   background-color: lightgray;
+  /* Margen interno superior */
+  padding-top: 1rem;
+}
+.mat-mdc-icon-button {
+  /* Sobreescribir el radio de los botones */
+  border-radius: 10%;
 }
 
+button {
+  /* Color de los botones*/
+  color: white;
+}
 .buttonContainer button {
-  margin-right: 0.5rem;
+  /* Ajustar margenes entre los botones */
+  margin-right: 1rem;
+}
+
+.isSelected {
+  /* Cambio del color si el botón ha sido seleccionado */
+  background-color: black;
+  color: white;
 }
 
 /* CSS para las tablas */
@@ -57,17 +77,10 @@ td, th {
   background-color: white;
 }
 
-/* 001 */
-a {
-  /* Eliminar decoracion y color */
-  text-decoration: none; 
-  color: black;
-}
-
-/* 011 */
-a:hover {
-  /* Incluir subrayado */
-  text-decoration: underline ;
+/* 020 */
+.mat-column-name:hover {
+  /* Para marcar el elemento al pasar el ratón/dedo por encima */
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.5);
 }
 
 /* CSS para las cards */
@@ -87,6 +100,7 @@ a:hover {
 .card {
   /* Ancho y márgenes de las cards */
   width: 30%;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 

@@ -4,6 +4,8 @@ import { CharacterDetail } from '../../models/character-detail.interface';
 import { Character } from '../../models/character.interface';
 import { CharacterService } from '../../services/character-service';
 import { Spinner } from '../../shared/components/spinner/spinner';
+import { CommonModule } from '@angular/common';
+
 /* ANGULAR MATERIAL */
 import { MatTableModule} from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
@@ -13,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-dragon-ball-list',
-  imports: [RouterModule, Spinner, MatTableModule, MatCardModule, MatIconModule, MatButtonModule],
+  imports: [RouterModule, Spinner, MatTableModule, MatCardModule, MatIconModule, MatButtonModule, CommonModule],
   templateUrl: './dragon-ball-list.html',
   styleUrl: './dragon-ball-list.scss',
 })
