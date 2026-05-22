@@ -27,20 +27,60 @@
   font-weight: bold;
 }
 
-.mat-mdc-button {
-  background-color: black;
-  --mat-button-text-label-text-color: white;
-  border-radius: 10%;
-}
+/* CSS para gestión de botones */
 
+/* 010 */
 .buttonDetailContainer {
+  /* Centrar el botón 'Show all details' */
   display: flex;
   justify-content: center;
-
+  /* Margen externo inferior */
   margin-bottom: 1rem;
 }
 
-.characterDetailContainer {
-  padding: 1rem;
-  font-size: 1.2rem;
+/* 010 */
+.mat-mdc-button {
+  /* Modificación del color del botón de Angular material */
+  background-color: black;
+  --mat-button-text-label-text-color: white;
+  /* Ajustes del borde para que quede menos 'redondeado' */
+  border-radius: 20%;
+}
+
+/* 011 */
+button:hover {
+  /* Cambio de color para indicar al usuario que tiene seleccionado el botón */
+  color: black;
+  background-color: lightgrey;
+}
+
+/* CSS para los tabs */
+
+/* 010 */
+.detail-tabs {
+  /* Modificar el color por defecto para que no sea azul */
+  --mat-tab-active-indicator-color:black;
+}
+
+/* 010 */
+.separator {
+  /* Separador del contenido con los tabs de arriba*/
+  margin-top: 2rem;
+}
+
+/* Otros elementos CSS a gestionar */
+
+/* 001 */
+p {
+  /* Facilitar la lectura del texto */
+  font-size: 1rem;
+  line-height: 1.5rem; 
+}
+
+/* 001 */
+img {
+  /* Centrar la imagen y disminuir su espacio */
+  display: block;
+  width: 30%;
+  margin: auto;
 }
