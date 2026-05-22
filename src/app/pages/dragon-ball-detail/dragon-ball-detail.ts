@@ -3,9 +3,13 @@ import { CharacterDetail } from '../../models/character-detail.interface';
 import { CharacterService } from '../../services/character-service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
+// Angular Material
+import { MatButtonModule } from '@angular/material/button';
+import { MatAnchor } from "@angular/material/button";
+
 @Component({
   selector: 'app-dragon-ball-detail',
-  imports: [RouterLink],
+  imports: [RouterLink, MatButtonModule],
   templateUrl: './dragon-ball-detail.html',
   styleUrl: './dragon-ball-detail.scss',
 })
@@ -21,6 +25,8 @@ export class DragonBallDetail implements OnInit {
     image: '',
     affiliation: ''
   });
+
+  isCharacterDetailView = signal(false);
 
   constructor(
     private characterService: CharacterService,
@@ -39,5 +45,9 @@ export class DragonBallDetail implements OnInit {
         this.characterDetail.set(detail);
       });
     }
+  }
+
+  toggleCharacterDetailView(): void {
+    this.isCharacterDetailView.update(value => !value);
   }
 }

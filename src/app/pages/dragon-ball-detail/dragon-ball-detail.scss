@@ -1,0 +1,46 @@
+/*CSS contenedor */
+
+/* 010 */
+.container {
+  /* Borde para separar con el fondo */
+  border: 0.5rem solid black;
+  /* Contraste de fondo de la aplicación */
+  background-color: #FABA8F;
+}
+
+/* CSS para la cabecera */
+
+/* 001 */
+.headerContainer {
+  /* Colocación de los elementos */
+  display: flex;
+  justify-content: space-between;
+  /* Margen interno superior */
+  padding-top: 1rem;
+}
+
+/* 011 */
+.headerContainer h2 {
+  /* Margen exterior izquierdo */
+  margin-left: 1rem;
+  /* Peso de la letra */
+  font-weight: bold;
+}
+
+.mat-mdc-button {
+  background-color: black;
+  --mat-button-text-label-text-color: white;
+  border-radius: 10%;
+}
+
+.buttonDetailContainer {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+}
+
+.characterDetailContainer {
+  padding: 1rem;
+  font-size: 1.2rem;
+}

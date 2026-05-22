@@ -1,4 +1,54 @@
-<div clas="container">
+<div class="container">
+  <div class="headerContainer">
+    <div>
+      @if (characterDetail()) {
+        <h2>{{ characterDetail().name }}</h2>
+      }
+    </div>
+    <button routerLink="/" matButton aria-label="Volver atrás a la pantalla de Home">
+      Back
+    </button>
+  </div>
+
+  
+    @if (characterDetail()) {
+
+      <div class="buttonDetailContainer">
+        <button
+          matButton
+          aria-label="Ver detalle del personaje"
+          (click)="toggleCharacterDetailView()"
+        >
+          Show all details
+        </button>
+      </div>
+
+      @if (isCharacterDetailView()) {
+        <div class="characterDetailContainer">
+          <p><strong>Character ID:</strong> {{ characterDetail().id }}</p>
+          <p><strong>Name :</strong> {{ characterDetail().name }}</p>
+          <p><strong>Ki :</strong> {{ characterDetail().ki }}</p>
+          <p><strong>MaxKi :</strong> {{ characterDetail().maxKi }}</p>
+          <p><strong>Race :</strong> {{ characterDetail().race }}</p>
+          <p><strong>Gender :</strong> {{ characterDetail().gender }}</p>
+          <p><strong>Description :</strong> {{ characterDetail().description }}</p>
+          <p><strong>Affiliation :</strong> {{ characterDetail().affiliation }}</p>
+          <p>
+            <img
+              style="width: 40%; height: 40%"
+              class="rounded mx-auto d-block"
+              src="{{ characterDetail().image }}"
+              alt="Character from the popular franchise Dragon Ball"
+            />
+          </p>
+        </div>
+      }
+    }
+</div>
+
+<!-- 
+
+
   @if(characterDetail()) {
     <div class="row animate__animated animate__rubberBand animate__backInDown">
       <div class="col">
@@ -22,4 +72,5 @@
       </div>
     </div>
   }
-</div>
+
+-->
