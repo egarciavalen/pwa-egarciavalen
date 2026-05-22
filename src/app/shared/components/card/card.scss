@@ -1,6 +1,14 @@
 /* CSS para las cards */
 
 /* 010 */
+.cardContainer {
+  /* Colocacion de los elementos flex */
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around; 
+}
+
+/* 010 */
 .card {
   /* Ancho y márgenes de las cards */
   width: 30%;

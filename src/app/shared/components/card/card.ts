@@ -14,7 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 export class Card {
 
   // Input
-  @Input() character!: CharacterDetail;
+  @Input() characters!: CharacterDetail[];
 
   constructor() {}
 

@@ -23,12 +23,9 @@
 
   @if (isCardView()) {
     <!-- Formato con las cards -->
-    <div class="cardContainer">
-      @for (character of characters(); track character.id) {
-        <app-card [character]="character"></app-card>
-      }
-    </div>
+      <app-card [characters]="characters()"></app-card>
   } @else {
+    <!-- Formato con la tabla -->
     <app-grid [characters]="characters()"></app-grid>
   }
 </div>
