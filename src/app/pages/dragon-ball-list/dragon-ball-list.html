@@ -1,11 +1,14 @@
 <div class="container">
-  <div class="buttonContainer">
-    <button [ngClass]="{'isSelected': isCardView()}" matIconButton  aria-label="Vista del contenido usando tarjetas" (click)="showCardView()">
-      <mat-icon>apps</mat-icon>
-    </button>
-    <button [ngClass]="{'isSelected': !isCardView()}" matIconButton  aria-label="Vista del contenido usando una tabla" (click)="showTableView()">
-      <mat-icon>list</mat-icon>
-    </button>
+  <div class="headerContainer">
+    <h2>DRAGON BALL PWA by egarciavalen</h2>
+    <div>
+      <button [ngClass]="{'isSelected': isCardView()}" matIconButton  aria-label="Vista del contenido usando tarjetas" (click)="showCardView()">
+        <mat-icon>apps</mat-icon>
+      </button>
+      <button [ngClass]="{'isSelected': !isCardView()}" matIconButton  aria-label="Vista del contenido usando una tabla" (click)="showTableView()">
+        <mat-icon>list</mat-icon>
+      </button>
+    </div>
   </div>
 
   @if (isCardView()) {
@@ -37,7 +40,7 @@
 
       <!-- NAME -->
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <th class="nameHeaderColumn" mat-header-cell *matHeaderCellDef>Name</th>
         <td [routerLink]="['/dragonball', character.id]" class="animate__animated animate__fadeInRight" mat-cell *matCellDef="let character">
          {{ character.name }}
         </td>

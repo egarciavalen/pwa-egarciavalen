@@ -1,29 +1,51 @@
+/*CSS contenedor */
+
+/* 010 */
+.container {
+  /* Borde para separar con el fondo */
+  border: 0.5rem solid black;
+  /* Contraste de fondo de la aplicación */
+  background-color: #FABA8F;
+}
+
 /* CSS para los botones */
 
 /* 001 */
-.buttonContainer {
+.headerContainer {
   /* Colocación de los botones */
   display: flex;
-  justify-content: right;  
-  /* Color de fondo */
-  background-color: lightgray;
+  justify-content: space-between;
   /* Margen interno superior */
   padding-top: 1rem;
 }
+
+/* 011 */
+.headerContainer h2 {
+  /* Margen exterior izquierdo */
+  margin-left: 1rem;
+  /* Peso de la letra */
+  font-weight: bold;
+}
+
+/* 010 */
 .mat-mdc-icon-button {
   /* Sobreescribir el radio de los botones */
   border-radius: 10%;
 }
 
+/* 001 */
 button {
   /* Color de los botones*/
   color: white;
 }
-.buttonContainer button {
+
+/* 011 */
+.headerContainer button {
   /* Ajustar margenes entre los botones */
   margin-right: 1rem;
 }
 
+/* 010 */
 .isSelected {
   /* Cambio del color si el botón ha sido seleccionado */
   background-color: black;
@@ -43,13 +65,15 @@ table, td, th {
 /* 001 */
 table {
   /* Color de fondo */
-  background-color: lightgrey;
+  background-color: #FABA8F;
 }
 
 /* 001 */
 td, th {
   /* Borde redondeado */
   border-radius: 1rem;
+  /* Ajustes de letra */
+  font-size: 1.5rem;
 }
 
 /* 010 */
@@ -83,6 +107,12 @@ td, th {
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.5);
 }
 
+/* 020*/
+.nameHeaderColumn:hover {
+  /* Para que la fila 'Name' no se subraye al seleccionarse*/
+  box-shadow: none;
+}
+
 /* CSS para las cards */
 
 /* 010 */
@@ -91,9 +121,6 @@ td, th {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around; 
-
-  /* Color de fondo */
-  background-color: lightgrey;
 }
 
 /* 010 */
@@ -104,6 +131,12 @@ td, th {
   margin-bottom: 1rem;
 }
 
+mat-card {
+  /* Bordes redondeados */
+  /* Se ajusta aquí para que no salgan espacios en blanco */
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
 /* 001 */
 mat-card-header {
   /* Centrar el contenido */
