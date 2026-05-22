@@ -2,12 +2,16 @@
 
 /* 001 */
 table, td, th {
-  /* Color de fondo */
-  background-color: lightgrey;
   /* Eliminar bordes y dejar espacio */
   border: none;
   border-collapse: separate;
   border-spacing: 1rem;
+}
+
+table, td, th {
+  /* Color de fondo */
+  background-color: lightgrey;
+  color: black;
 }
 
 /* 001 */
@@ -23,7 +27,8 @@ td {
 }
 
 /* 010 */
-.mat-column-id {
+/* Uso de una clase para no mezclar con el ID header */
+.backgroundId {
   /* Ancho del identificador */
   width: 4rem;
   /* Colores */

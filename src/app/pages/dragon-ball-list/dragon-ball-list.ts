@@ -18,6 +18,8 @@ export class DragonBallList implements OnInit {
   isLoading = signal(true);
   columnsToDisplay = ['id', 'name'];
 
+  // Signal para actualizar la vista
+  showCardView = signal(false);
 
   constructor(private characterService: CharacterService) {}
 
