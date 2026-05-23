@@ -1,12 +1,12 @@
 import { Component, OnInit, signal } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CharacterDetail } from '../../models/character-detail.interface';
 import { CharacterService } from '../../services/character-service';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 /* ANTULAR MATERIAL */
 import { MatButtonModule } from '@angular/material/button';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-dragon-ball-detail',
@@ -24,7 +24,7 @@ export class DragonBallDetail implements OnInit {
     gender: '',
     description: '',
     image: '',
-    affiliation: ''
+    affiliation: '',
   });
 
   isCharacterDetailView = signal(false);
@@ -35,20 +35,24 @@ export class DragonBallDetail implements OnInit {
     private router: Router,
   ) {}
 
-
   ngOnInit(): void {
     const characterId = this.activatedRoute.snapshot.paramMap.get('id');
     if (characterId) {
-      this.characterService.getCharacterDetailById(characterId).subscribe((detail) => {
-        if (!detail) {
+      this.characterService.getCharacterDetailById(characterId).subscribe({
+        next: (detail) => {
+          if (!detail) {
+            this.router.navigateByUrl('/');
+          }
+          this.characterDetail.set(detail);
+        },
+        error: () => {
           this.router.navigateByUrl('/');
-        }
-        this.characterDetail.set(detail);
+        },
       });
     }
   }
 
   toggleCharacterDetailView(): void {
-    this.isCharacterDetailView.update(value => !value);
+    this.isCharacterDetailView.update((value) => !value);
   }
 }

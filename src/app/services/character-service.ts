@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { CharacterDetail } from '../models/character-detail.interface';
 import { Character } from '../models/character.interface';
 
@@ -18,6 +18,10 @@ export class CharacterService {
   }
 
   getCharacterDetailById(id: string): Observable<CharacterDetail> {
-    return this.http.get<CharacterDetail>('https://dragonball-api.com/api/characters/' + id);
+    return this.http.get<CharacterDetail>('https://dragonball-api.com/api/characters/' + id).pipe(catchError(this.handleError));
+  }
+
+  handleError(error: HttpErrorResponse) {
+    return throwError(error);
   }
 }
