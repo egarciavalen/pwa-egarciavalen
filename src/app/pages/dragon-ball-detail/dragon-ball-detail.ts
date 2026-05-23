@@ -38,16 +38,11 @@ export class DragonBallDetail implements OnInit {
   ngOnInit(): void {
     const characterId = this.activatedRoute.snapshot.paramMap.get('id');
     if (characterId) {
-      this.characterService.getCharacterDetailById(characterId).subscribe({
-        next: (detail) => {
-          if (!detail) {
-            this.router.navigateByUrl('/');
-          }
-          this.characterDetail.set(detail);
-        },
-        error: () => {
+      this.characterService.getCharacterDetailById(characterId).subscribe((detail) => {
+        if (!detail) {
           this.router.navigateByUrl('/');
-        },
+        }
+        this.characterDetail.set(detail);
       });
     }
   }

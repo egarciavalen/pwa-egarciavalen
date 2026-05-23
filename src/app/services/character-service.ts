@@ -18,10 +18,6 @@ export class CharacterService {
   }
 
   getCharacterDetailById(id: string): Observable<CharacterDetail> {
-    return this.http.get<CharacterDetail>('https://dragonball-api.com/api/characters/' + id).pipe(catchError(this.handleError));
-  }
-
-  handleError(error: HttpErrorResponse) {
-    return throwError(error);
+    return this.http.get<CharacterDetail>('https://dragonball-api.com/api/characters/' + id);
   }
 }
