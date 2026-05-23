@@ -3,10 +3,11 @@ import { CharacterDetail } from '../../models/character-detail.interface';
 import { CharacterService } from '../../services/character-service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
-// Angular Material
+/* ANTULAR MATERIAL */
 import { MatButtonModule } from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatExpansionModule} from '@angular/material/expansion';
+
 @Component({
   selector: 'app-dragon-ball-detail',
   imports: [RouterLink, MatButtonModule, MatTabsModule, MatExpansionModule],

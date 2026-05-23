@@ -5,7 +5,7 @@
       <button
         [ngClass]="{ isSelected: isCardView() }"
         matIconButton
-        aria-label="Vista del contenido usando tarjetas"
+        aria-label="Show card view"
         (click)="showCardView()"
       >
         <mat-icon>apps</mat-icon>
@@ -13,7 +13,7 @@
       <button
         [ngClass]="{ isSelected: !isCardView() }"
         matIconButton
-        aria-label="Vista del contenido usando una tabla"
+        aria-label="Show grid view"
         (click)="showTableView()"
       >
         <mat-icon>list</mat-icon>

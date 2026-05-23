@@ -5,14 +5,14 @@
         <h2>{{ characterDetail().name }}</h2>
       }
     </div>
-    <button routerLink="/" matButton aria-label="Volver atrás a la pantalla de Home">Back</button>
+    <button routerLink="/" matButton aria-label="Return to list view">Back</button>
   </div>
 
   @if (characterDetail()) {
     <div class="buttonDetailContainer">
       <button
         matButton
-        aria-label="Ver detalle del personaje"
+        aria-label="Show details of the character"
         (click)="toggleCharacterDetailView()"
       >
         Show all details

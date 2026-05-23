@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+
+/* ANGULAR MATERIAL */
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CharacterDetail } from '../../../models/character-detail.interface';
 import { RouterLink } from '@angular/router';
 
-// Angular Material
+/* ANGULAR MATERIAL */
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
