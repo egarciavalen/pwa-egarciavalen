@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1779476140358,
+  "timestamp": 1779527650827,
   "index": "/pwa-egarciavalen/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/pwa-egarciavalen/favicon.ico",
         "/pwa-egarciavalen/index.html",
-        "/pwa-egarciavalen/main-ZCL7OGJW.js",
+        "/pwa-egarciavalen/main-QTAJOAXF.js",
         "/pwa-egarciavalen/manifest.webmanifest",
         "/pwa-egarciavalen/styles-VIC2HRL3.css"
       ],
@@ -29,11 +29,9 @@
         "ignoreVary": true
       },
       "urls": [
-        "/pwa-egarciavalen/icons/icon-128x128.png",
         "/pwa-egarciavalen/icons/icon-144x144.png",
-        "/pwa-egarciavalen/icons/icon-152x152.png",
         "/pwa-egarciavalen/icons/icon-192x192.png",
-        "/pwa-egarciavalen/icons/icon-384x384.png",
+        "/pwa-egarciavalen/icons/icon-48x48.png",
         "/pwa-egarciavalen/icons/icon-512x512.png",
         "/pwa-egarciavalen/icons/icon-72x72.png",
         "/pwa-egarciavalen/icons/icon-96x96.png"
@@ -58,17 +56,15 @@
   ],
   "hashTable": {
     "/pwa-egarciavalen/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/pwa-egarciavalen/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
-    "/pwa-egarciavalen/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
-    "/pwa-egarciavalen/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
-    "/pwa-egarciavalen/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
-    "/pwa-egarciavalen/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
-    "/pwa-egarciavalen/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
-    "/pwa-egarciavalen/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
-    "/pwa-egarciavalen/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/pwa-egarciavalen/index.html": "b2f89c9c05bca80b76f94acc497608e04cfae9e7",
-    "/pwa-egarciavalen/main-ZCL7OGJW.js": "9087c7d391e604444a1d02667f3612fea33563f2",
-    "/pwa-egarciavalen/manifest.webmanifest": "3969ae68fc6b9d8e1ff90c87b27ea0125036af85",
+    "/pwa-egarciavalen/icons/icon-144x144.png": "d4a9940a6a242b84fceb295fa1c3d7eec867e52f",
+    "/pwa-egarciavalen/icons/icon-192x192.png": "6e662f8195bacab8fe27079606acdf82528f908f",
+    "/pwa-egarciavalen/icons/icon-48x48.png": "641071b3eb5976877d3b09256f787a83595a6e27",
+    "/pwa-egarciavalen/icons/icon-512x512.png": "96e3ee6ae37712c85c95dde8a370a32611b26128",
+    "/pwa-egarciavalen/icons/icon-72x72.png": "d750a03d0a81a7dd1758ea0b268e475f7a39551c",
+    "/pwa-egarciavalen/icons/icon-96x96.png": "651abea5b19dfb214068525dc17f00398fbfe861",
+    "/pwa-egarciavalen/index.html": "ba29f00d265d172fb64cf9e5aa4a8665c65bbcfd",
+    "/pwa-egarciavalen/main-QTAJOAXF.js": "b9f7e3e5c20968b14d714812395c643fe30dc136",
+    "/pwa-egarciavalen/manifest.webmanifest": "9ece1397bd3c49839362ccfc6c1a4c184dc88744",
     "/pwa-egarciavalen/styles-VIC2HRL3.css": "b9d9a4ee288316d7247e5f9d2fdc6e8a9b436dc5"
   },
   "navigationUrls": [
